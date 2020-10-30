@@ -11,7 +11,6 @@ change the game as i wants... so that is what im doing.
 The individual mods and games belongs to their owners with its own licence 
 restrictions. 
 
-The code writen by me is published under the Unlicence, for more information,
-please refer to <https://unlicense.org>
+The code writen by me is published under the Unlicence, see LICENSE.txt
 
 I think that the knowledge is free and belongs to the world.
