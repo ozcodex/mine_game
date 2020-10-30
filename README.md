@@ -20,7 +20,7 @@ change the game as i wants... so that is what im doing.
 
 # Changes
 
-This mods are included from _minetest_extended_ without changes:
+This mods are included from _minetest_extended_:
 - 3d Armor with sfinv, stand and shields 
 - Backpacks
 - Carpets
