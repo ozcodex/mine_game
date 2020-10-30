@@ -53,12 +53,12 @@ This ones are my own changes:
 - Add Thirsty, Sprint, Armor and Hunger mods, works with hudbars
 - Add Bonemeal
 - Remove corn as bait from fishing
-- Restore 3d armor to original version
 - Fix bonemeal annd fishing to only rewrite default:dirt if drop is not defined
 - Add cartographer as mod group
 - Add Ambience
 - Add Craft Table
 - Add Item Drop
+- Modifiy default, sfinv and crafting table to a 6x2 inventory and a 6 hotbar
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
