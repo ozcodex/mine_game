@@ -22,5 +22,4 @@ The individual mods and games belongs to their owners with its own licence
 restrictions. 
 
 The code writen by me is published under the Unlicence, see LICENSE.txt
-
 I think that the knowledge is free and belongs to the world.
