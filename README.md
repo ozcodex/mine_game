@@ -23,17 +23,42 @@ change the game as i wants... so that is what im doing.
 This mods are included from _minetest_extended_ without changes:
 - 3d Armor with sfinv, stand and shields 
 - Backpacks
-- Bones, this version is mixed with bonemeal
-- sfinv
+- Carpets
+- Clouds
+- Doors
+- Death Anounce
+- Sfinv
+- Fireflies
+- Fire plus
+- Fishing
+- Flowerpot
+- Frame
+- Mobs, with animals and monster
+- ts_furniture
+- throwing
 
 This mods are included from the oficial [_minetest_game_](https://github.com/minetest/minetest_game):
-- Beds
-- Boats
-- Default
+- Beds, Boats, Bones, Bucket, Default, Carts, Creative, Dye, Env Sounds,
+Farming, Fire, Flowers, Player Api, Spawn, Gamme Commands, Vessels, TNT, Walls,
+Weather, Wool, Stairs, Xpanes
+
+I didn't include the following mods:
+- Binoculars, Map, Screwdriver, Dungeon Loot, Give Initial Stuff, MTG Craftguide, Set Home
 
 This ones are my own changes:
-- Mix the official Bucket mod with [wooden_bucket](https://gitlab.com/h2mm/wooden_bucket)
-
+- Add [wooden_bucket](https://gitlab.com/h2mm/wooden_bucket) mod.
+- Add Craftguide Mod
+- Add Books Plus Mod
+- Add mod Treasurer, with chests on piramids and dungeons
+- Add Thirsty, Sprint, Armor and Hunger mods, works with hudbars
+- Add Bonemeal
+- Remove corn as bait from fishing
+- Restore 3d armor to original version
+- Fix bonemeal annd fishing to only rewrite default:dirt if drop is not defined
+- Add cartographer as mod group
+- Add Ambience
+- Add Craft Table
+- Add Item Drop
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
