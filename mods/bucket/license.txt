@@ -2,6 +2,8 @@ License of source code
 ----------------------
 
 GNU Lesser General Public License, version 2.1
+Copyright (C) 2020 ozcodex <oscarbernal93@gmail.com>
+Copyright (C) 2019 Hume2 <teratux.mail@gmail.com>
 Copyright (C) 2011-2016 Kahrl <kahrl@gmx.net>
 Copyright (C) 2011-2016 celeron55, Perttu Ahola <celeron55@gmail.com>
 Copyright (C) 2011-2016 Various Minetest developers and contributors
@@ -20,6 +22,7 @@ Licenses of media (textures)
 ----------------------------
 
 Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+Copyright (C) 2019 Hume2 <teratux.mail@gmail.com>
 Copyright (C) 2015-2016 ElementW
 
 You are free to:
@@ -49,3 +52,5 @@ rights may limit how you use the material.
 
 For more details:
 http://creativecommons.org/licenses/by-sa/3.0/
+
+

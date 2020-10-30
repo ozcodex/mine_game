@@ -1,23 +1,39 @@
 -- Minetest 0.4 mod: bucket
 -- See README.txt for licensing and other information.
 
--- Load support for MT game translation.
-local S = minetest.get_translator("bucket")
-
-minetest.register_alias("bucket", "bucket:bucket_empty")
-minetest.register_alias("bucket_water", "bucket:bucket_water")
-minetest.register_alias("bucket_lava", "bucket:bucket_lava")
-
 minetest.register_craft({
-	output = "bucket:bucket_empty 1",
+	output = 'bucket_wooden:bucket_empty 1',
 	recipe = {
-		{"default:steel_ingot", "", "default:steel_ingot"},
-		{"", "default:steel_ingot", ""},
+		{'group:wood', '', 'group:wood'},
+		{'', 'group:wood', ''},
 	}
 })
 
-bucket = {}
-bucket.liquids = {}
+if minetest.registered_items["farming:bowl"] then
+	minetest.register_craft({
+		output = 'farming:bowl 4',
+		recipe = {'bucket_wooden:bucket_empty'},
+		type = 'shapeless',
+	})
+end
+
+if minetest.registered_items["ethereal:bowl"] then
+	minetest.register_craft({
+		output = 'ethereal:bowl 4',
+		recipe = {'bucket_wooden:bucket_empty'},
+		type = 'shapeless',
+	})
+end
+
+minetest.register_craft({
+	type = "fuel",
+	recipe = "bucket_wooden:bucket_empty",
+	burntime = 22,
+})
+
+
+bucket_wooden = {}
+bucket_wooden.liquids = {}
 
 local function check_protection(pos, name, text)
 	if minetest.is_protected(pos, name) then
@@ -25,7 +41,7 @@ local function check_protection(pos, name, text)
 			.. " tried to " .. text
 			.. " at protected position "
 			.. minetest.pos_to_string(pos)
-			.. " with a bucket")
+			.. " with a wooden bucket")
 		minetest.record_protection_violation(pos, name)
 		return true
 	end
@@ -43,15 +59,15 @@ end
 --                  source neighbour, even if defined as 'liquid_renewable = false'.
 --                  Needed to avoid creating holes in sloping rivers.
 -- This function can be called from any mod (that depends on bucket).
-function bucket.register_liquid(source, flowing, itemname, inventory_image, name,
+function bucket_wooden.register_liquid(source, flowing, itemname, inventory_image, name,
 		groups, force_renew)
-	bucket.liquids[source] = {
+	bucket_wooden.liquids[source] = {
 		source = source,
 		flowing = flowing,
 		itemname = itemname,
 		force_renew = force_renew,
 	}
-	bucket.liquids[flowing] = bucket.liquids[source]
+	bucket_wooden.liquids[flowing] = bucket_wooden.liquids[source]
 
 	if itemname ~= nil then
 		minetest.register_craftitem(itemname, {
@@ -107,16 +123,16 @@ function bucket.register_liquid(source, flowing, itemname, inventory_image, name
 				end
 
 				minetest.set_node(lpos, {name = source})
-				return ItemStack("bucket:bucket_empty")
+				return ItemStack("bucket_wooden:bucket_empty")
 			end
 		})
 	end
 end
 
-minetest.register_craftitem("bucket:bucket_empty", {
-	description = S("Empty Bucket"),
-	inventory_image = "bucket.png",
-	groups = {tool = 1},
+minetest.register_craftitem("bucket_wooden:bucket_empty", {
+	description = "Empty Wooden Bucket",
+	inventory_image = "bucket_wooden.png",
+	stack_max = 99,
 	liquids_pointable = true,
 	on_use = function(itemstack, user, pointed_thing)
 		if pointed_thing.type == "object" then
@@ -128,7 +144,7 @@ minetest.register_craftitem("bucket:bucket_empty", {
 		end
 		-- Check if pointing to a liquid source
 		local node = minetest.get_node(pointed_thing.under)
-		local liquiddef = bucket.liquids[node.name]
+		local liquiddef = bucket_wooden.liquids[node.name]
 		local item_count = user:get_wielded_item():get_count()
 
 		if liquiddef ~= nil
@@ -157,7 +173,7 @@ minetest.register_craftitem("bucket:bucket_empty", {
 				end
 
 				-- set to return empty buckets minus 1
-				giving_back = "bucket:bucket_empty "..tostring(item_count-1)
+				giving_back = "bucket_wooden:bucket_empty "..tostring(item_count-1)
 
 			end
 
@@ -183,13 +199,13 @@ minetest.register_craftitem("bucket:bucket_empty", {
 	end,
 })
 
-bucket.register_liquid(
+bucket_wooden.register_liquid(
 	"default:water_source",
 	"default:water_flowing",
-	"bucket:bucket_water",
-	"bucket_water.png",
-	S("Water Bucket"),
-	{tool = 1, water_bucket = 1}
+	"bucket_wooden:bucket_water",
+	"bucket_wooden_water.png",
+	"Water Bucket",
+	{water_bucket_wooden = 1}
 )
 
 -- River water source is 'liquid_renewable = false' to avoid horizontal spread
@@ -198,45 +214,13 @@ bucket.register_liquid(
 -- River water source is instead made renewable by the 'force renew' option
 -- used here.
 
-bucket.register_liquid(
+bucket_wooden.register_liquid(
 	"default:river_water_source",
 	"default:river_water_flowing",
-	"bucket:bucket_river_water",
-	"bucket_river_water.png",
-	S("River Water Bucket"),
-	{tool = 1, water_bucket = 1},
+	"bucket_wooden:bucket_river_water",
+	"bucket_wooden_river_water.png",
+	"River Water Bucket",
+	{water_bucket_wooden = 1},
 	true
 )
 
-bucket.register_liquid(
-	"default:lava_source",
-	"default:lava_flowing",
-	"bucket:bucket_lava",
-	"bucket_lava.png",
-	S("Lava Bucket"),
-	{tool = 1}
-)
-
-minetest.register_craft({
-	type = "fuel",
-	recipe = "bucket:bucket_lava",
-	burntime = 60,
-	replacements = {{"bucket:bucket_lava", "bucket:bucket_empty"}},
-})
-
--- Register buckets as dungeon loot
-if minetest.global_exists("dungeon_loot") then
-	dungeon_loot.register({
-		{name = "bucket:bucket_empty", chance = 0.55},
-		-- water in deserts/ice or above ground, lava otherwise
-		{name = "bucket:bucket_water", chance = 0.45,
-			types = {"sandstone", "desert", "ice"}},
-		{name = "bucket:bucket_water", chance = 0.45, y = {0, 32768},
-			types = {"normal"}},
-		{name = "bucket:bucket_lava", chance = 0.45, y = {-32768, -1},
-			types = {"normal"}},
-	})
-end
-
--- Include Wooden Bucket
-dofile(minetest.get_modpath("bucket") .. "/wooden.lua")
