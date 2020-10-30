@@ -237,6 +237,3 @@ if minetest.global_exists("dungeon_loot") then
 			types = {"normal"}},
 	})
 end
-
--- Include Wooden Bucket
-dofile(minetest.get_modpath("bucket") .. "/wooden.lua")
