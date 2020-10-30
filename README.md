@@ -29,6 +29,7 @@ This mods are included from _minetest_extended_ without changes:
 This mods are included from the oficial [_minetest_game_](https://github.com/minetest/minetest_game):
 - Beds
 - Boats
+- Default
 
 This ones are my own changes:
 - Mix the official Bucket mod with [wooden_bucket](https://gitlab.com/h2mm/wooden_bucket)
