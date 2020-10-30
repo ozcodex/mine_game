@@ -23,16 +23,41 @@ change the game as i wants... so that is what im doing.
 This mods are included from _minetest_extended_ without changes:
 - 3d Armor with sfinv, stand and shields 
 - Backpacks
-- Bones, this version is mixed with bonemeal
-- sfinv
+- Carpets
+- Clouds
+- Doors
+- Death Anounce
+- Sfinv
+- Fireflies
+- Fire plus
+- Fishing
+- Flowerpot
+- Frame
+- Mobs, with animals and monster
+- Snowball
+- ts_furniture
+- throwing
 
 This mods are included from the oficial [_minetest_game_](https://github.com/minetest/minetest_game):
-- Beds
-- Boats
-- Default
+- Beds, Boats, Bones, Bucket, Default, Carts, Creative, Dye, Env Sounds,
+Farming, Fire, Flowers, Player Api, Spawn, Gamme Commands, Vessels, TNT, Walls,
+Weather, Wool, Stairs, Xpanes
 
 This ones are my own changes:
-- Mix the official Bucket mod with [wooden_bucket](https://gitlab.com/h2mm/wooden_bucket)
+- Adds [wooden_bucket](https://gitlab.com/h2mm/wooden_bucket) mod.
+- Adds Craftguide Mod
+- Adds Books Plus Mod
+- Add mod Treasurer, with chests on piramids and dungeons
+- Add Thirsty, Sprint, Armor and Hunger mods, works with hudbars
+- Adds Bonemeal
+- Remove corn as bait from fishing
+- Restore 3d armor to original version
+
+I didnt include the following mods:
+- Binoculars
+- Map
+- Screwdriver
+
 
 
 # Images
