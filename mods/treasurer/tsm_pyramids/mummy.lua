@@ -365,7 +365,7 @@ minetest.register_craftitem("tsm_pyramids:spawn_egg", {
 	_doc_items_usagehelp = S("Place the egg to create a mummy on this spot. Careful, it will probably attack immediately!"),
 	inventory_image = "tsm_pyramids_mummy_egg.png",
 	liquids_pointable = false,
-	stack_max = 99,
+	stack_max = tonumber(minetest.settings:get("max_objects_per_block") or 99),
 	on_place = function(itemstack, placer, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return itemstack
