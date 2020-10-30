@@ -7,6 +7,12 @@ The name of the game makes a word play with both meanings of mine, the mining
 component of the game and the fact that this specific version of the game is
 mine.
 
+I started to used the modified version of the game by PetiAPocok 
+[Minetest Extended](https://github.com/PetiAPocok/minetest_extended), I really
+liked what he do with some mods and the core of the game.
+Some things still needs changes, and some changes i didnt liked, so is a mix of
+a lot of sources.
+
 # Why
 There are a lot of things that i loved of minetest and its mods, but also a
 lot of things that i hated, the ggod thing about open source is that i can 
