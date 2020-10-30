@@ -1,3 +1,5 @@
+<p align="center"><img src="menu/logo.png"></p>
+
 # Mine Game
 Mine game, use the minetest game engine. https://github.com/minetest/minetest
 
