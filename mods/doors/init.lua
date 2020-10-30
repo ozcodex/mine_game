@@ -78,8 +78,6 @@ end
 -- nodes from being placed in the top half of the door.
 minetest.register_node("doors:hidden", {
 	description = S("Hidden Door Segment"),
-	inventory_image = "doors_hidden_segment.png^default_invisible_node_overlay.png",
-	wield_image = "doors_hidden_segment.png^default_invisible_node_overlay.png",
 	drawtype = "airlike",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -346,7 +344,7 @@ function doors.register(name, def)
 
 	if def.recipe then
 		minetest.register_craft({
-			output = name,
+			output = name .. " 3",
 			recipe = def.recipe,
 		})
 	end

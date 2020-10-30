@@ -6,9 +6,3 @@ Bones=
 @1 died at @2, and bones were placed.=
 @1's fresh bones=
 @1's bones=
-
-Mulch = 
-Bone Meal = 
-Fertiliser = 
-Bone = 
-[bonemeal] loaded = 

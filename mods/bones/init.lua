@@ -28,15 +28,15 @@ local bones_formspec =
 local share_bones_time = tonumber(minetest.settings:get("share_bones_time")) or 1200
 local share_bones_time_early = tonumber(minetest.settings:get("share_bones_time_early")) or share_bones_time / 4
 
-minetest.register_node("bones:bones_block", {
-	description = S("Bones block"),
+minetest.register_node("bones:bones", {
+	description = S("Bones"),
 	tiles = {
-		"bones_block_top.png^[transform2",
-		"bones_block_bottom.png",
-		"bones_block_side.png",
-		"bones_block_side.png",
-		"bones_block_rear.png",
-		"bones_block_front.png"
+		"bones_top.png^[transform2",
+		"bones_bottom.png",
+		"bones_side.png",
+		"bones_side.png",
+		"bones_rear.png",
+		"bones_front.png"
 	},
 	paramtype2 = "facedir",
 	groups = {dig_immediate = 2},
@@ -73,10 +73,10 @@ minetest.register_node("bones:bones_block", {
 		local meta = minetest.get_meta(pos)
 		if meta:get_inventory():is_empty("main") then
 			local inv = player:get_inventory()
-			if inv:room_for_item("main", {name = "bones:bones_block"}) then
-				inv:add_item("main", {name = "bones:bones_block"})
+			if inv:room_for_item("main", {name = "bones:bones"}) then
+				inv:add_item("main", {name = "bones:bones"})
 			else
-				minetest.add_item(pos, "bones:bones_block")
+				minetest.add_item(pos, "bones:bones")
 			end
 			minetest.remove_node(pos)
 		end
@@ -108,10 +108,10 @@ minetest.register_node("bones:bones_block", {
 
 		-- remove bones if player emptied them
 		if has_space then
-			if player_inv:room_for_item("main", {name = "bones:bones_block"}) then
-				player_inv:add_item("main", {name = "bones:bones_block"})
+			if player_inv:room_for_item("main", {name = "bones:bones"}) then
+				player_inv:add_item("main", {name = "bones:bones"})
 			else
-				minetest.add_item(pos,"bones:bones_block")
+				minetest.add_item(pos,"bones:bones")
 			end
 			minetest.remove_node(pos)
 		end
@@ -231,7 +231,7 @@ minetest.register_on_dieplayer(function(player)
 			end
 			player_inv:set_list(list_name, {})
 		end
-		drop(pos, ItemStack("bones:bones_block"))
+		drop(pos, ItemStack("bones:bones"))
 		minetest.log("action", player_name .. " dies at " .. pos_string ..
 			". Inventory dropped")
 		if bones_position_message then
@@ -241,7 +241,7 @@ minetest.register_on_dieplayer(function(player)
 	end
 
 	local param2 = minetest.dir_to_facedir(player:get_look_dir())
-	minetest.set_node(pos, {name = "bones:bones_block", param2 = param2})
+	minetest.set_node(pos, {name = "bones:bones", param2 = param2})
 
 	minetest.log("action", player_name .. " dies at " .. pos_string ..
 		". Bones placed")
@@ -282,5 +282,3 @@ minetest.register_on_dieplayer(function(player)
 		meta:set_string("infotext", S("@1's bones", player_name))
 	end
 end)
-
-dofile(minetest.get_modpath("bones") .. "/bonemeal.lua")
