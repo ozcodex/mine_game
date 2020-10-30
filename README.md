@@ -59,6 +59,7 @@ This ones are my own changes:
 - Add Craft Table
 - Add Item Drop
 - Modifiy default, sfinv and crafting table to a 6x2 inventory and a 6 hotbar
+- Remove Lava Pickaxe from Mobs Monster
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping

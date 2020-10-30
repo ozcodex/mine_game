@@ -38,9 +38,6 @@ mobs:register_mob("mobs_monster:lava_flan", {
 	water_damage = 8,
 	lava_damage = 0,
 	light_damage = 0,
-	immune_to = {
-		{"mobs:pick_lava", -2}, -- lava pick heals 2 health
-	},
 	fly_in = {"default:lava_source", "default:lava_flowing"},
 	animation = {
 		speed_normal = 15,
@@ -127,11 +124,6 @@ function minetest.handle_node_drops(pos, drops, digger)
 	-- does player exist?
 	if not digger then return end
 
-	-- are we holding Lava Pick?
-	if digger:get_wielded_item():get_name() ~= ("mobs:pick_lava") then
-		return old_handle_node_drops(pos, drops, digger)
-	end
-
 	-- reset new smelted drops
 	local hot_drops = {}
 
@@ -164,39 +156,6 @@ function minetest.handle_node_drops(pos, drops, digger)
 
 	return old_handle_node_drops(pos, hot_drops, digger)
 end
-
-minetest.register_tool(":mobs:pick_lava", {
-	description = S("Lava Pickaxe"),
-	inventory_image = "mobs_pick_lava.png",
-	tool_capabilities = {
-		full_punch_interval = 0.4,
-		max_drop_level=3,
-		groupcaps={
-			cracky = {times={[1]=1.80, [2]=0.80, [3]=0.40}, uses=40, maxlevel=3},
-		},
-		damage_groups = {fleshy = 6, fire = 1},
-	},
-	groups = {pickaxe = 1}
-})
-
-minetest.register_craft({
-	output = "mobs:pick_lava",
-	recipe = {
-		{"mobs:lava_orb", "mobs:lava_orb", "mobs:lava_orb"},
-		{"", "default:obsidian_shard", ""},
-		{"", "default:obsidian_shard", ""},
-	}
-})
-
--- Add [toolranks] mod support if found
-if minetest.get_modpath("toolranks") then
-
-minetest.override_item("mobs:pick_lava", {
-	original_description = "Lava Pickaxe",
-	description = toolranks.create_description("Lava Pickaxe", 0, 1),
-	after_use = toolranks.new_afteruse})
-end
-
 
 -- obsidian flan
 
