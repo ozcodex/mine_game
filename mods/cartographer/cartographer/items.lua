@@ -151,16 +151,16 @@ local function show_map_formspec(map, player_x, player_z, player_name, height_mo
             h = 0.75,
             bg = skin.marker_bg,
 
-            gui.image_button {
-                x = 0.125,
-                y = 0.125,
-                w = 0.5,
-                h = 0.5,
-
-                id = "height_button",
-                image = height_button_texture,
-                tooltip = "Toggle height view",
-            }
+           -- gui.image_button {
+           --     x = 0.125,
+           --     y = 0.125,
+            --    w = 0.5,
+            --    h = 0.5,
+--
+            --    id = "height_button",
+           --     image = height_button_texture,
+           --     tooltip = "Toggle height view",
+            --}
         },
     };
 
@@ -284,8 +284,8 @@ minetest.register_on_player_receive_fields(function(player, name, fields)
             elseif k == "next_button" then
                 local new_page = math.min(data.page + 1, math.ceil(markers.count() / 20));
                 show_map_formspec(map, pos.x, pos.z, player:get_player_name(), data.height_mode, new_page);
-            elseif k == "height_button" then
-                show_map_formspec(map, pos.x, pos.z, player:get_player_name(), not data.height_mode, data.page);
+           -- elseif k == "height_button" then
+            --    show_map_formspec(map, pos.x, pos.z, player:get_player_name(), not data.height_mode, data.page);
             elseif k == "quit" then
                 player_maps[player:get_player_name()] = nil;
             end
