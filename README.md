@@ -34,7 +34,6 @@ This mods are included from _minetest_extended_ without changes:
 - Flowerpot
 - Frame
 - Mobs, with animals and monster
-- Snowball
 - ts_furniture
 - throwing
 
@@ -43,22 +42,23 @@ This mods are included from the oficial [_minetest_game_](https://github.com/min
 Farming, Fire, Flowers, Player Api, Spawn, Gamme Commands, Vessels, TNT, Walls,
 Weather, Wool, Stairs, Xpanes
 
+I didn't include the following mods:
+- Binoculars, Map, Screwdriver, Dungeon Loot, Give Initial Stuff, MTG Craftguide, Set Home
+
 This ones are my own changes:
-- Adds [wooden_bucket](https://gitlab.com/h2mm/wooden_bucket) mod.
-- Adds Craftguide Mod
-- Adds Books Plus Mod
+- Add [wooden_bucket](https://gitlab.com/h2mm/wooden_bucket) mod.
+- Add Craftguide Mod
+- Add Books Plus Mod
 - Add mod Treasurer, with chests on piramids and dungeons
 - Add Thirsty, Sprint, Armor and Hunger mods, works with hudbars
-- Adds Bonemeal
+- Add Bonemeal
 - Remove corn as bait from fishing
 - Restore 3d armor to original version
-
-I didnt include the following mods:
-- Binoculars
-- Map
-- Screwdriver
-
-
+- Fix bonemeal annd fishing to only rewrite default:dirt if drop is not defined
+- Add cartographer as mod group
+- Add Ambience
+- Add Craft Table
+- Add Item Drop
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
