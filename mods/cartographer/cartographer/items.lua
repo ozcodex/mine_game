@@ -114,17 +114,17 @@ local function show_map_formspec(map, player_x, player_z, player_name, height_mo
     player_maps[player_name] = {
         id = map.id,
         page = marker_page or 1,
-        height_mode = false,
+        height_mode = height_mode,
     };
 
     player_x, player_z = map:to_coordinates(player_x, player_z, true);
     local formspec, formspec_width, _ = map_formspec.from_map(map, player_x, player_z, height_mode);
     local height_button_texture;
-    -- if height_mode then
-    --     height_button_texture = skin.height_button_texture .. ".png";
-    -- else
-    --     height_button_texture = skin.flat_button_texture .. ".png";
-    -- end
+    if height_mode then
+        height_button_texture = skin.height_button_texture .. ".png";
+    else
+        height_button_texture = skin.flat_button_texture .. ".png";
+    end
 
     local data = {
         gui.style_type {
