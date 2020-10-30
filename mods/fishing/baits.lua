@@ -1,3 +1,5 @@
+
+
 minetest.register_craftitem("fishing:worm", {
 	description = "Worm",
     inventory_image = "fishing_worm.png",
@@ -5,11 +7,23 @@ minetest.register_craftitem("fishing:worm", {
 })
 
 -- Add worm drop to dirt drops
-table.insert(minetest.registered_items["default:dirt"].drop.items, { rarity = 30, items = {"fishing:worm"} })
+if minetest.registered_nodes["default:dirt"].drop then
+	table.insert(minetest.registered_nodes['default:dirt'].drop.items, { rarity = 30, items = {"fishing:worm"} })
+else
+	minetest.override_item("default:dirt", {
+		drop = {
+			max_items = 1,
+			items = {
+				{ 	
+					rarity = 30,
+			 		items = {"fishing:worm"}
+				},
+				{
+				items = {"default:dirt"}
+				}
+			}
+		}
+	})
 
--- Make corn useable as fishing bait
-local expanded_groups = minetest.registered_items["farming:seed_corn"].groups
-expanded_groups["fishing_bait"] = 1
-minetest.override_item("farming:seed_corn", {
-	groups = expanded_groups
-})
+end
+

@@ -641,24 +641,28 @@ minetest.register_craft({
 
 
 -- add bones to dirt
-minetest.override_item("default:dirt", {
-	drop = {
-		max_items = 1,
-		items = {
-			{
-				items = {"bonemeal:bone"},
-				rarity = 40
-			},
-			{
-				items = {"default:dirt"}
+if minetest.registered_nodes["default:dirt"].drop then
+	table.insert(minetest.registered_nodes['default:dirt'].drop.items, { rarity = 40, items = {"bonemeal:bone"} })
+else
+	minetest.override_item("default:dirt", {
+		drop = {
+			max_items = 1,
+			items = {
+				{
+					items = {"bonemeal:bone"},
+					rarity = 40
+				},
+				{
+					items = {"default:dirt"}
+				}
 			}
 		}
-	}
-})
-
+	})
+end
 
 -- add support for other mods
 dofile(path .. "/mods.lua")
 dofile(path .. "/lucky_block.lua")
 
 print (S("[MOD] bonemeal loaded"))
+
