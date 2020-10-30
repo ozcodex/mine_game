@@ -31,28 +31,25 @@ local armor_textures = setmetatable({}, {
 
 armor = {
 	timer = 0,
-	elements = {"head", "torso", "legs", "feet"},
+	elements = {"head", "torso", "legs", "feet", "back"},
 	physics = {"jump", "speed", "gravity"},
 	attributes = {"heal", "fire", "water"},
 	formspec = "image[2.5,0;2,4;armor_preview]"..
 		default.gui_bg..
 		default.gui_bg_img..
 		default.gui_slots..
-		default.get_hotbar_bg(0, 4.7)..
-		"list[current_player;main;0,4.7;8,1;]"..
-		"list[current_player;main;0,5.85;8,3;8]",
+		default.get_hotbar_bg(0, 5.2)..
+        "list[current_player;main;0,5.2;8,1;]"..
+        "list[current_player;main;0,6.35;8,3;8]",
 	def = armor_def,
 	textures = armor_textures,
 	default_skin = "character",
 	materials = {
 		wood = "group:wood",
-		cactus = "default:cactus",
 		steel = "default:steel_ingot",
 		bronze = "default:bronze_ingot",
 		diamond = "default:diamond",
-		gold = "default:gold_ingot",
 		mithril = "moreores:mithril_ingot",
-		crystal = "ethereal:crystal_ingot",
 	},
 	fire_nodes = {
 		{"default:lava_source",     5, 8},
@@ -87,7 +84,6 @@ armor.config = {
 	level_multiplier = 1,
 	heal_multiplier = 1,
 	material_wood = true,
-	material_cactus = true,
 	material_steel = true,
 	material_bronze = true,
 	material_diamond = true,
