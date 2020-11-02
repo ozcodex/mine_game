@@ -61,6 +61,16 @@ This ones are my own changes:
 - Modifiy default, sfinv and crafting table to a 6x2 inventory and a 6 hotbar
 - Remove Lava Pickaxe from Mobs Monster
 
+# To Do
+This are the things that are missing or the bugs to solve:
+  - fix the inventory size on chest
+  - fix the inventory size on furnace
+  - fix the inventory size on armor view
+  - modify the skin list to the windows size
+  - remove senseless items from thrirsty
+  - add hidratation behaviour to foods
+  - fix hidratation reset on login
+
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
 not breaking any copyright, but maybe I change the images for some created 
