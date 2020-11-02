@@ -54,7 +54,6 @@ This ones are my own changes:
 - Add Bonemeal
 - Remove corn as bait from fishing
 - Fix bonemeal annd fishing to only rewrite default:dirt if drop is not defined
-- Add cartographer as mod group
 - Add Ambience
 - Add Craft Table
 - Add Item Drop
@@ -78,7 +77,6 @@ This are the things that are missing or the bugs to solve:
   - fix carthographer error
   - fix armor hudbar always on 0%
   - hide bed top and botton from crafting list
-  
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
