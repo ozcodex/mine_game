@@ -65,11 +65,20 @@ This ones are my own changes:
 This are the things that are missing or the bugs to solve:
   - fix the inventory size on chest
   - fix the inventory size on furnace
+  - fix the inventory size on bookshelf
+  - fix the inventory size on vessels shelf
+  - fix the inventory size on armor stand
   - fix the inventory size on armor view
+  - fix the inventory size on beehive 
   - modify the skin list to the windows size
   - remove senseless items from thrirsty
   - add hidratation behaviour to foods
   - fix hidratation reset on login
+  - fix creative menu to avoid overlay
+  - fix carthographer error
+  - fix armor hudbar always on 0%
+  - hide bed top and botton from crafting list
+  
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
