@@ -74,7 +74,7 @@ This are the things that are missing or the bugs to solve:
   - add hidratation behaviour to foods
   - fix hidratation reset on login
   - fix creative menu to avoid overlay
-  - fix carthographer error
+  - ~~fix carthographer error~~ (carthographer was removed)
   - fix armor hudbar always on 0%
   - hide bed top and botton from crafting list
 
