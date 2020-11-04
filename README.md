@@ -80,6 +80,7 @@ This are the things that are missing or the bugs to solve:
   - ~~fix error when going to sleep~~ (not happening in 5.3)
   - fix armor bar at 0% when the game starts
   - change stamina rediction to 1 instead of 2
+  - add stamina reduction when minning
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
