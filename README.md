@@ -77,6 +77,7 @@ This are the things that are missing or the bugs to solve:
   - ~~fix carthographer error~~ (carthographer was removed)
   - fix armor hudbar always on 0%
   - hide bed top and botton from crafting list
+  - fix error when going to sleep
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
