@@ -72,12 +72,13 @@ This are the things that are missing or the bugs to solve:
   - modify the skin list to the windows size
   - remove senseless items from thrirsty
   - add hidratation behaviour to foods
-  - fix hidratation reset on login
+  - ~~fix hidratation reset on login~~ (not happening in 5.3)
   - fix creative menu to avoid overlay
   - ~~fix carthographer error~~ (carthographer was removed)
-  - fix armor hudbar always on 0%
-  - hide bed top and botton from crafting list
-  - fix error when going to sleep
+  - ~~fix armor hudbar always on 0%~~ (not happening in 5.3)
+  - ~~hide bed top and botton from crafting list~~ (not happening in 5.3)
+  - ~~fix error when going to sleep~~ (not happening in 5.3)
+  - fix armor bar at 0% when the game starts
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
