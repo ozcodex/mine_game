@@ -81,6 +81,7 @@ This are the things that are missing or the bugs to solve:
   - fix armor bar at 0% when the game starts
   - change stamina rediction to 1 instead of 2
   - add stamina reduction when minning
+  - change buckets to be filled with water instead of river water
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
