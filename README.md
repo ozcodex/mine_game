@@ -59,6 +59,7 @@ This ones are my own changes:
 - Add Item Drop
 - Modifiy default, sfinv and crafting table to a 6x2 inventory and a 6 hotbar
 - Remove Lava Pickaxe from Mobs Monster
+- Change the backpac size to 6x4 grid
 
 # To Do
 This are the things that are missing or the bugs to solve:

@@ -11,8 +11,8 @@ sfinv.register_page("backpack", {
     end,
     get = function(self, player, context)
         return sfinv.make_formspec(player, context,
-            "size[8,9]" ..
-            "list[context;main;0,0.3;8,4;]" ..
+            "size[6,4]" ..
+            "list[context;main;1,0.3;6,4;]" ..
             "listring[current_player;main]"..
             "listring[context;main]",
             true
@@ -68,7 +68,7 @@ minetest.register_tool("backpacks:backpack", {
                 end,
             })
 
-            new_di:set_size("bag", 32)
+            new_di:set_size("bag", 24)
 
             ms:set_int("backpack_count", backpack_count + 1)
 
@@ -82,8 +82,8 @@ minetest.register_tool("backpacks:backpack", {
                 end,
                 get = function(self, player, context)
                     return sfinv.make_formspec(player, context,
-                        "size[8,9]" ..
-                        "list[detached:" .. meta:get_string("inv_name") .. ";bag;0,0.3;8,4;]" ..
+                        "size[6,4]" ..
+                        "list[detached:" .. meta:get_string("inv_name") .. ";bag;1,0.3;6,4;]" ..
                         "listring[current_player;main]"..
                         "listring[detached:" .. meta:get_string("inv_name") .. ";bag]",
                         true
@@ -117,9 +117,9 @@ minetest.register_tool("backpacks:backpack", {
                 end,
             })
 
-            new_di:set_size("bag", 32)
+            new_di:set_size("bag", 24)
 
-            for i=1,32 do
+            for i=1,24 do
                 new_di:set_stack("bag", i,  minetest.deserialize(meta:get_string(i)))
             end
 
@@ -129,8 +129,8 @@ minetest.register_tool("backpacks:backpack", {
                 end,
                 get = function(self, player, context)
                     return sfinv.make_formspec(player, context,
-                        "size[8,9]" ..
-                        "list[detached:" .. meta:get_string("inv_name") .. ";bag;0,0.3;8,4;]" ..
+                        "size[6,4]" ..
+                        "list[detached:" .. meta:get_string("inv_name") .. ";bag;1,0.3;6,4;]" ..
                         "listring[current_player;main]"..
                         "listring[detached:" .. meta:get_string("inv_name") .. ";bag]",
                         true
@@ -144,8 +144,8 @@ minetest.register_tool("backpacks:backpack", {
                 end,
                 get = function(self, player, context)
                     return sfinv.make_formspec(player, context,
-                        "size[8,9]" ..
-                        "list[detached:" .. meta:get_string("inv_name") .. ";bag;0,0.3;8,4;]" ..
+                        "size[6,4]" ..
+                        "list[detached:" .. meta:get_string("inv_name") .. ";bag;1,0.3;6,4;]" ..
                         "listring[current_player;main]"..
                         "listring[detached:" .. meta:get_string("inv_name") .. ";bag]",
                         true
