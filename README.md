@@ -82,7 +82,8 @@ This are the things that are missing or the bugs to solve:
   - fix armor bar at 0% when the game starts
   - change stamina rediction to 1 instead of 2
   - add stamina reduction when minning
-  - change buckets to be filled with water instead of river water
+  - ~~change buckets to be filled with water instead of river water~~ make only the river water drinkable, replace river water name for potable water
+  - add a recipe to make potable water from water boiling it on the furnace
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
