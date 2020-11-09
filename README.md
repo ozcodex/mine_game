@@ -51,7 +51,8 @@ This ones are my own changes:
 - Add Books Plus Mod
 - Add mod Treasurer, with chests on piramids and dungeons
 - Add Thirsty, Sprint, Armor and Hunger mods, works with hudbars
-- Add Bonemeal
+- Add Bonemeal Mod
+- Add [charcoal](https://forum.minetest.net/viewtopic.php?t=9779) 
 - Remove corn as bait from fishing
 - Fix bonemeal annd fishing to only rewrite default:dirt if drop is not defined
 - Add Ambience
