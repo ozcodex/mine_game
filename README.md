@@ -50,7 +50,8 @@ This ones are my own changes:
 - Add Craftguide Mod
 - Add Books Plus Mod
 - Add mod Treasurer, with chests on piramids and dungeons
-- Add Thirsty, Sprint, Armor and Hunger mods, works with hudbars
+- Add [Thirsty](https://github.com/bendeutsch/minetest-thirsty), 
+Sprint, Armor and Hunger mods, works with hudbars
 - Add Bonemeal Mod
 - Add [charcoal](https://forum.minetest.net/viewtopic.php?t=9779) 
 - Remove corn as bait from fishing
