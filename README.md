@@ -87,6 +87,7 @@ This are the things that are missing or the bugs to solve:
   - ~~change buckets to be filled with water instead of river water~~ make only the river water drinkable
   - replace river water name for potable water
   - add a recipe to make potable water from water boiling it on the furnace
+  - always open crafting when press inventory key
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
