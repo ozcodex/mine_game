@@ -34,13 +34,12 @@ armor = {
 	elements = {"head", "torso", "legs", "feet", "back"},
 	physics = {"jump", "speed", "gravity"},
 	attributes = {"heal", "fire", "water"},
-	formspec = "image[2.5,0;2,4;armor_preview]"..
+	formspec = "image[3,0;2,4;armor_preview]"..
 		default.gui_bg..
 		default.gui_bg_img..
 		default.gui_slots..
-		default.get_hotbar_bg(0, 5.2)..
-        "list[current_player;main;0,5.2;8,1;]"..
-        "list[current_player;main;0,6.35;8,3;8]",
+        "list[current_player;main;1,4.7;6,1;]"..
+        "list[current_player;main;1,6;6,2;6]",
 	def = armor_def,
 	textures = armor_textures,
 	default_skin = "character",
@@ -429,7 +428,7 @@ armor.get_armor_formspec = function(self, name, listring)
 		return "label[0,0;Armor not initialized!]"
 	end
 	local formspec = armor.formspec..
-		"list[detached:"..name.."_armor;armor;0,0.5;2,3;]"
+		"list[detached:"..name.."_armor;armor;0.5,0.5;2,3;]"
 	if listring == true then
 		formspec = formspec.."listring[current_player;main]"..
 			"listring[detached:"..name.."_armor;armor]"

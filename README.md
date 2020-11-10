@@ -62,6 +62,7 @@ Sprint, Armor and Hunger mods, works with hudbars
 - Modifiy default, sfinv and crafting table to a 6x2 inventory and a 6 hotbar
 - Remove Lava Pickaxe from Mobs Monster
 - Change the backpac size to 6x4 grid
+- fix the inventory size on armor view
 
 # To Do
 This are the things that are missing or the bugs to solve:
@@ -70,7 +71,6 @@ This are the things that are missing or the bugs to solve:
   - fix the inventory size on bookshelf
   - fix the inventory size on vessels shelf
   - fix the inventory size on armor stand
-  - fix the inventory size on armor view
   - fix the inventory size on beehive 
   - modify the skin list to the windows size
   - remove senseless items from thrirsty
