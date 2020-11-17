@@ -63,10 +63,12 @@ Sprint, Armor and Hunger mods, works with hudbars
 - Remove Lava Pickaxe from Mobs Monster
 - Change the backpac size to 6x4 grid
 - fix the inventory size on armor view
+- fix size in chests
+- add sickles and scythes mod
 
 # To Do
 This are the things that are missing or the bugs to solve:
-  - fix the inventory size on chest
+  - ~~fix the inventory size on chest~~
   - fix the inventory size on furnace
   - fix the inventory size on bookshelf
   - fix the inventory size on vessels shelf
