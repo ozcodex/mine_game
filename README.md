@@ -64,7 +64,8 @@ Sprint, Armor and Hunger mods, works with hudbars
 - Change the backpac size to 6x4 grid
 - fix the inventory size on armor view
 - fix size in chests
-- add sickles and scythes mod
+- add [Sickles and Scythes](https://github.com/t-affeldt/sickles) mod
+- add [trash can](https://github.com/minetest-mods/trash_can) mod 
 
 # To Do
 This are the things that are missing or the bugs to solve:
@@ -90,6 +91,7 @@ This are the things that are missing or the bugs to solve:
   - replace river water name for potable water
   - add a recipe to make potable water from water boiling it on the furnace
   - always open crafting when press inventory key
+  - removu dumpster from trash can mod
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
