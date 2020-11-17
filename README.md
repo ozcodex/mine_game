@@ -92,7 +92,8 @@ This are the things that are missing or the bugs to solve:
   - add a recipe to make potable water from water boiling it on the furnace
   - always open crafting when press inventory key
   - remove dumpster from trash can mod
-  -fix shift click overflow of inventory
+  - fix shift click overflow of inventory
+  - change inventory size on trash can
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
