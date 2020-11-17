@@ -7,12 +7,11 @@ function default.chest.get_chest_formspec(pos)
 	local spos = pos.x .. "," .. pos.y .. "," .. pos.z
 	local formspec =
 		"size[8,9]" ..
-		"list[nodemeta:" .. spos .. ";main;0,0.3;8,4;]" ..
-		"list[current_player;main;0,4.85;8,1;]" ..
-		"list[current_player;main;0,6.08;8,3;8]" ..
+		"list[nodemeta:" .. spos .. ";main;1,0.8;6,4;]" ..
+		"list[current_player;main;1,5.35;6,1;]" ..
+		"list[current_player;main;1,6.58;6,2;6]" ..
 		"listring[nodemeta:" .. spos .. ";main]" ..
-		"listring[current_player;main]" ..
-		default.get_hotbar_bg(0,4.85)
+		"listring[current_player;main]"
 	return formspec
 end
 
