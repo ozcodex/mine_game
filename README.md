@@ -91,7 +91,8 @@ This are the things that are missing or the bugs to solve:
   - replace river water name for potable water
   - add a recipe to make potable water from water boiling it on the furnace
   - always open crafting when press inventory key
-  - removu dumpster from trash can mod
+  - remove dumpster from trash can mod
+  -fix shift click overflow of inventory
 
 # Images
 The logos and images were made with [TextCraft](https://textcraft.net) hoping
